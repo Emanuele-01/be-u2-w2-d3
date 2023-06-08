@@ -19,15 +19,19 @@ public class Reservations {
 	@GeneratedValue
 	private UUID id;
 	
+	private City city;
 	private User user;
 	private Location location;
 	private Date dataPrenotazione;
+	private Date fineDataPrenotazione;
 	
 
-	public Reservations(User user, Location location, Date dataPrenotazione) {
+	public Reservations(City city, User user, Location location, Date dataPrenotazione, Date fineDataPrenotazione) {
 		super();
+		this.city = city;
 		this.user = user;
 		this.location = location;
 		this.dataPrenotazione = dataPrenotazione;
+		this.dataPrenotazione = fineDataPrenotazione;
 	}
 }

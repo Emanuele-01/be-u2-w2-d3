@@ -3,6 +3,8 @@ package com.example.entities;
 import java.util.UUID;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -20,6 +22,8 @@ public class Location {
 	private String code;
 	private String description;
 	private int maxNumPeople;
+	
+	@Enumerated(EnumType.STRING)
 	private LocationType locationType;
 	
 	public Location(String code, String description, int maxNumPeople, LocationType locationType) {

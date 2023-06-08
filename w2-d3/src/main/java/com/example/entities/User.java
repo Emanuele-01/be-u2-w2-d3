@@ -20,14 +20,16 @@ public class User {
 	
 	private String name;
 	private String lastName;
+	private String Email;
 	private int age;
 	
 	
 	
-	public User(String name, String lastName, int age) {
+	public User(String name, String lastName, String email, int age) {
 		super();
 		this.name = name;
 		this.lastName = lastName;
+		this.Email = email;
 		this.age = age;
 	}
 }
